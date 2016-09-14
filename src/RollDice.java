@@ -10,23 +10,22 @@ public class RollDice {
 		System.out.println();
 		//Create Scanner
 		Scanner input = new Scanner(System.in);
-		String  choice = "y";
+		String  choice = "y" ;
 			
 		
 		//While loop
+		while (choice.equalsIgnoreCase("y")) {
 		
-		while (choice.equalsIgnoreCase("y")){
-		
+			System.out.println("Welcome to the Grand Circus Casino! Roll the dice? (y/n): ");
+			input.nextLine();
 			
 		//User prompt
-		System.out.println("Welcome to the Grand Circus Casino! Roll the dice? (y/n): ");
-		input.nextLine();
 		System.out.println("Roll 1:");
 		
 		//Create Random 
-		Random diceRoll = new Random(0);
-		int roll1 = diceRoll.nextInt(100);
-		int roll2 = diceRoll.nextInt(100);
+		Random diceRoll = new Random();
+		int roll1 = diceRoll.nextInt (6)+1 ;
+		int roll2 = diceRoll.nextInt (6)+1 ;
 		
 		//for loop
 		for (int count = 1; count <= 10; count++);
@@ -35,17 +34,17 @@ public class RollDice {
 		
 		//Continue prompt
 		System.out.println("Roll again?(y/n)");
-		input.nextLine();
+		//input.nextLine();
 		choice = input.next();
 		
+		}
 		//Thank you message
 		System.out.println("Thanks for gambling!");
 		
-		}
+		
+
+	}
 	}
 
 
 
-
-
-}
